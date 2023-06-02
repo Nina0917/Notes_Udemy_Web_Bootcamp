@@ -215,7 +215,7 @@ Chaining: apply where all selectors are true
 selector1selctor2 { css code.. }
 ```
 
-- selector1 must be element (start from the general), and it better be the **current** element (like if you want to select one of the li elements, use &lt;li&gt; instead &lt;ul&gt;)
+- selector1 can be element/class (start from the general), and it better be the **current** element (like if you want to select one of the li elements, use &lt;li&gt; instead &lt;ul&gt;)
 
 Combining Combiners
 
@@ -255,52 +255,82 @@ Fixed Positioning
 
 [Concept Graph Explanation](https://appbrewery.github.io/css-positioning/)
 
-
-----
+---
 
 ## Advanced CSS
+
 <br/>
 
-### CSS Display  
+### CSS Display
+
 <br/>
 
 ```html
-h2 {
-  display: blocl/inline/inline-block;
-}
+h2 { display: blocl/inline/inline-block; }
 ```
+
 - block: the element takes up the entire full width
 - inline: elements with display property set to inline fit into one line of the page (**you can't set width and height**)
 - inline-block: we can set width and height and they go to the same horizontal line
 
 [Concept Graph Explanation](https://appbrewery.github.io/css-display/)
 
-
 <br>
 
 ### CSS Float
+
 ```html
-img {
-  float:left/right;
-}
+img { float:left/right; }
 ```
 
-How to taget one element and makes it ignore the floating element? 
-```html 
-img {
-  float: left;
-}
+How to taget one element and makes it ignore the floating element?
 
-footer {
-  clear: left;
-}
+```html
+img { float: left; } footer { clear: left; }
 ```
 
 <br>
 
 ### Responsive Websites
+
 - Media Queries
 - CSS Grid
 - CSS Flexbox
 - External Frameworks (Bootstrap)
 
+```html
+@media (max-width: 600px) { h1 { font-size: 15px; } }
+```
+
+- Anything that is less than 600px should use the following style
+
+<br>
+
+### Project Problem
+
+```html
+<div class="left card"></div>
+<div class="left-card"></div>
+```
+
+- first div:
+
+```html
+.left.card { css code.. }
+```
+
+- second div:
+
+```html
+.left-card { css code.. }
+```
+
+<br>
+
+Put two div in the same line.
+![image nootes](./img.png)
+
+```html
+div.left.card { display: inline-block; width: 45%; float: left; } div.right.card
+{ display: inline-block; width: 45%; float: right; }
+```

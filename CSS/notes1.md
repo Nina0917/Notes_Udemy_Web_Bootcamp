@@ -199,8 +199,10 @@ selector, selector { css code... }
 
 Child: apply to direct child (not grandchild)
 
-```html
-parent_selector > selector { css cose. }
+```
+parent_selector > selector {
+  css code.
+}
 ```
 
 Descendant: apply to all descendants (including grandchild)

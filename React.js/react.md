@@ -2,11 +2,6 @@
 
 ```jsx
 ReactDOM.render(
-  "HTML contains JSX code and they will be interpreted to Javascript",
-  "location to render the code"
-);
-
-ReactDOM.render(
   <h1>Hello {fName + " " + lName}!</h1>,
   document.getElementById("root")
 );
